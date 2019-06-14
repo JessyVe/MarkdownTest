@@ -1,6 +1,7 @@
 # Lab Report - Vertiefende Gesamtwiederholung
 > Abgabe 04
 > Laura Gröttrup | Jessica Veit
+
 >Repository: [https://github.com/LauraGroettrup/19-Abgabe04-Groettrup-Veit.git](https://github.com/LauraGroettrup/19-Abgabe04-Groettrup-Veit.git)
  
  
@@ -41,7 +42,7 @@ In der `pom.xml` muss die Abhängigkeit zur JUnit Library für den Build Prozess
 
 ---
 #### JavaDoc 
-Jede Methode und Klasse wurde mit einem JavaDoc-Kommentar versehen, um anschließend um Maven Build Prozess eine API Dokumentation generieren zu lassen. 
+Jede Methode und Klasse wurde mit einem JavaDoc-Kommentar versehen, um anschließend im Maven Build Prozess eine API Dokumentation generieren lassen zu können. 
 
 Ein solches Kommentar hat grundlegend folgende Form: 
 ```Java
@@ -57,7 +58,7 @@ Ein solches Kommentar hat grundlegend folgende Form:
 ```
 ---
 #### Log4j (Version 2) 
-In jeder Methode des gegenständlichen **Queue** Projektes wurden Loggging-Messages implementiert um später den Workflow der Application über den die Log-Dateien nachvollziehen zu können. 
+In jeder Methode des gegenständlichen **Queue** Projektes wurden Loggging-Messages implementiert um später den Workflow der Application über die Log-Dateien nachvollziehen zu können. 
 
 Eine solche Implementation sieht wie folgt aus: 
 ```java
@@ -74,7 +75,7 @@ Eine solche Implementation sieht wie folgt aus:
  LOG.info("This is a informational log-message. ");
  LOG.error("This is a log-message documenting an error.");
 ```
-Auch für Maven muss die Abhängigkeit zur Log4j Library bekannt gemacht werden. Zu diesem Zweck wird in die `pom.xml` um diese Dependency folgendermaßen ergänzt: 
+Auch für Maven muss die Abhängigkeit zur Log4j Library bekannt gemacht werden. Zu diesem Zweck wird die `pom.xml` um diese Dependency folgendermaßen ergänzt: 
 ```xml
 <dependencies>
 	<!-- Log4j Dependencies -->
@@ -86,12 +87,19 @@ Auch für Maven muss die Abhängigkeit zur Log4j Library bekannt gemacht werden.
 	...
 </dependencies>
 ```
-Weiters kann Log4J auf die Bedürfnisse des jeweiligen Projektes über eine `log4j2-test.properties` angepasst werden. 
+Weiters kann Log4J auf die Bedürfnisse des jeweiligen Projektes über eine Properties-Datei angepasst werden. 
+In dieser Datei können zum Beispiel
+1. Output to Console
+2. Output to File
+3. Output to Console and File
 
+Optionen konfiguriert werden. Dabei wird unteranderm das "Target" bestimmt (<i>Wohin sollen die Meldungen geschrieben werden?</i>)
+oder auch das Layout der Meldungen definiert werden.
 
 ---
 ### Maven Sites 
-Anpassung im `pom.xml` des Projektes, damit die Dokumentation generiert werden kann:
+Erforderlich Anpassung im `pom.xml` des Projektes, damit die Dokumentation generiert werden kann
+(Einbindung der Plugins in den Maven Build Prozess):
 ```xml
 <build>
     <plugins>
@@ -104,10 +112,11 @@ Anpassung im `pom.xml` des Projektes, damit die Dokumentation generiert werden k
 	</plugins>
 </build>
 ```
-Durch die Ausführung des Befehls `mvn site` in der, im project-root geöffnten Kommandozeileneingabe, wird die API Dokumentation im Ordner `..\target\site` erstellt. Die Hauptseite ist definiert als `index.html`. 
+Durch die Ausführung des Befehls `mvn site` in der, im project-root geöffneten Kommandozeileneingabe, wird die API Dokumentation im Ordner `..\target\site` erstellt. Die Hauptseite ist definiert als `index.html` und kann über einen beliebigen Browser geöffnet werden. 
 
 <b>Manuelle Erstellung einer Seite</b>
-Um eine auch manuell erstellte Seiten in die Dokumentation zu integrieren, muss der `src` um den folgende interne Struktur ergänzt werden: 
+
+Um auch eine manuell erstellte Seiten in die Dokumentation zu integrieren, muss der `src` um den folgende interne Struktur ergänzt werden: 
 
 ```
 src 
@@ -163,3 +172,5 @@ Die manuell erstellte Seite ist auf der Hauptseite über den Menüpunkt **About*
 - [https://www.markdownguide.org/getting-started](https://www.markdownguide.org/getting-started)
 - [https://en.support.wordpress.com/markdown-quick-reference/](https://en.support.wordpress.com/markdown-quick-reference/)
 - [https://support.codebasehq.com/articles/tips-tricks/syntax-highlighting-in-markdown](https://support.codebasehq.com/articles/tips-tricks/syntax-highlighting-in-markdown)
+### Log4J
+- [https://www.mkyong.com/logging/log4j-log4j-properties-examples/](https://www.mkyong.com/logging/log4j-log4j-properties-examples/)
