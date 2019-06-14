@@ -37,7 +37,7 @@ In der `pom.xml` muss die Abhängigkeit zur JUnit Library für den Build Prozess
 </dependencies>
 ```
 
-![Screenshot - Manuell erstellte Maven Site](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
+![Screenshot - JUnit output @ build](https://github.com/JessyVe/MarkdownTest/blob/master/Images/002_Capture_JUnit_Output.PNG)
 
 ---
 #### JavaDoc 
@@ -93,16 +93,16 @@ Weiters kann Log4J auf die Bedürfnisse des jeweiligen Projektes über eine `log
 ### Maven Sites 
 Anpassung im `pom.xml` des Projektes, damit die Dokumentation generiert werden kann:
 ```xml
-	<build>
-     <plugins>
-	      ...
-		 <plugin>
-		     <groupId>org.apache.maven.plugins</groupId>
-		     <artifactId>maven-site-plugin</artifactId>
-		     <version>3.7.1</version>
-		 </plugin>
-	 </plugins>
-    </build>
+<build>
+    <plugins>
+	    ...
+		<plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-site-plugin</artifactId>
+		    <version>3.7.1</version>
+		</plugin>
+	</plugins>
+</build>
 ```
 Durch die Ausführung des Befehls `mvn site` in der, im project-root geöffnten Kommandozeileneingabe, wird die API Dokumentation im Ordner `..\target\site` erstellt. Die Hauptseite ist definiert als `index.html`. 
 
@@ -124,7 +124,7 @@ Hierbei kann die `index.apt` einen beliebigen Text beinhalten, welcher in **Mark
 Die manuell erstellte Seite ist auf der Hauptseite über den Menüpunkt **About** aufrufbar:
 
 
-![Screenshot - Manuell erstellte Maven Site](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
+![Screenshot - Manuell erstellte Maven Site](https://github.com/JessyVe/MarkdownTest/blob/master/Images/001_Capture_MavenSite.PNG)
 
 ## Github Flavor
 > **Übung Github Flavor**: Erstellen Sie einen Codeblock im Dokument, welcher 3 Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
