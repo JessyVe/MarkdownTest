@@ -135,7 +135,7 @@ Die manuell erstellte Seite ist auf der Hauptseite über den Menüpunkt **About*
 
 ![Screenshot - Manuell erstellte Maven Site](https://github.com/JessyVe/MarkdownTest/blob/master/Images/001_Capture_MavenSite.PNG)
 
-## Github Flavor
+## Using Github Flavors
 > **Übung Github Flavor**: Erstellen Sie einen Codeblock im Dokument, welcher 3 Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
 
 ```python 
