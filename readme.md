@@ -133,7 +133,7 @@ Hierbei kann die `index.apt` einen beliebigen Text beinhalten, welcher in **Mark
 Die manuell erstellte Seite ist auf der Hauptseite über den Menüpunkt **About** aufrufbar:
 
 
-![Screenshot - Manuell erstellte Maven Site](./Images/001_Capture_MavenSite.PNG)
+![Screenshot - Manuell erstellte Maven Site](https://raw.githubusercontent.com/JessyVe/MarkdownTest/f6c293b8528bf09fec0b9f64513165971a0e17db/Images/001_Capture_MavenSite.PNG)
 
 ## Using Github Flavors
 > **Übung Github Flavor**: Erstellen Sie einen Codeblock im Dokument, welcher 3 Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
