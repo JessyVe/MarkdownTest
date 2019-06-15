@@ -40,6 +40,30 @@ In der `pom.xml` muss die Abhängigkeit zur JUnit Library für den Build Prozess
 
 ![Screenshot - JUnit output @ build](002_Capture_JUnit_Output.PNG)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 #### JavaDoc 
 Jede Methode und Klasse wurde mit einem JavaDoc-Kommentar versehen, um anschließend im Maven Build Prozess eine API Dokumentation generieren lassen zu können. 
