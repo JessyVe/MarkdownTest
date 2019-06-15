@@ -38,31 +38,7 @@ In der `pom.xml` muss die Abhängigkeit zur JUnit Library für den Build Prozess
 </dependencies>
 ```
 
-![Screenshot - JUnit output @ build](002_Capture_JUnit_Output.PNG)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Screenshot - JUnit output @ build](https://raw.githubusercontent.com/JessyVe/MarkdownTest/master/002_Capture_JUnit_Output.PNG)
 
 ---
 #### JavaDoc 
@@ -157,7 +133,7 @@ Hierbei kann die `index.apt` einen beliebigen Text beinhalten, welcher in **Mark
 Die manuell erstellte Seite ist auf der Hauptseite über den Menüpunkt **About** aufrufbar:
 
 
-![Screenshot - Manuell erstellte Maven Site](001_Capture_MavenSite.PNG)
+![Screenshot - Manuell erstellte Maven Site](https://raw.githubusercontent.com/JessyVe/MarkdownTest/master/001_Capture_MavenSite.PNG)
 
 ## Using Github Flavors
 > **Übung Github Flavor**: Erstellen Sie einen Codeblock im Dokument, welcher 3 Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
