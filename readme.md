@@ -18,7 +18,8 @@
 
 Folgende Fehler wurden gefunden und behoben: 
  - Im Konstruktor wurde der falsche Variablenname genutzt. Statt den mitgegebenen Parameter "maxsize" zu verwenden, wurde der Wert der globale Variable "maxSize" auf sich selbst gesetzt.
- alter Javacode:  
+
+ Alter Javacode:  
 ```java
 private int maxSize = 5;
 
@@ -32,6 +33,38 @@ private int maxSize = 5;
 
 public StringQueue(int maxsize){
 	this.maxSize = maxsize;
+}
+```
+
+ - In der Methode poll() besagte die if-Bedingung, dass wenn die Größe des Elements leer war, dort also kein Element war, es gelöscht werden müsse, also genau das Gegenteil unserer Absicht.
+ 
+Alter Javacode:  
+```java
+if(elements.size() == 0){
+	elements.remove(0);
+}
+```
+ neuer Javacode:  
+```java
+if(elements.size() != 0){
+	elements.remove(0);	
+}
+```
+
+- In der Methode remove() wurde zuerst das erste Element mit Hilfe von poll() herausgefunden, danach aber mit einem leeren String überschrieben. 
+ 
+Alter Javacode:  
+```java
+String element = poll(); 
+element = "";
+if(element == null)
+	throw new NoSuchElementException("there's no element any more");
+```
+ neuer Javacode:  
+```java
+String element = poll(); 
+if(element == null){
+	throw new NoSuchElementException("there's no element any more");
 }
 ```
 
