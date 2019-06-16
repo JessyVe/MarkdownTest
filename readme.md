@@ -1,4 +1,4 @@
-# Lab Report - Vertiefende Gesamtwiederholung
+﻿# Lab Report - Vertiefende Gesamtwiederholung
 > Abgabe 04
 > Laura Gröttrup | Jessica Veit
 
@@ -17,8 +17,24 @@
 #### Debugging des bestehenden Codes
 
 Folgende Fehler wurden gefunden und behoben: 
- - bla bla
- - bla
+ - Im Konstruktor wurde der falsche Variablenname genutzt. Statt den mitgegebenen Parameter "maxsize" zu verwenden, wurde der Wert der globale Variable "maxSize" auf sich selbst gesetzt.
+ alter Javacode:  
+```java
+private int maxSize = 5;
+
+	public StringQueue(int maxsize){
+		maxSize = maxSize;
+}
+```
+ neuer Javacode:  
+```java
+private int maxSize = 5;
+
+public StringQueue(int maxsize){
+	this.maxSize = maxsize;
+}
+```
+
 ---
 #### Implementation der JUnit Tests
 Im gegenständlichen Projekt befindet sich eine Test Klasse `StringQueueTest.cs`, welche die Funktionalitäten der Klasse `StringQueue.cs` auf ihre richtige Ausführung überprüft.  
